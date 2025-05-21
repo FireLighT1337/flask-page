@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./static/style.css"/>
+</head>
+
+<body>
+<div class="basic">
+  <h1>Calculator:</h1>
+  <hr/>
+  <form method="post" action="{{ url_for('handle_calc_request') }}">
+    <label for="num1">Number 1:</label>
+    <input  type="text"
+            id="num1"
+            name="num1"
+            placeholder="First Number">
+    <label for="num2">Number 2:</label>
+    <input  type="text"
+            id="num2"
+            name="num2"
+            placeholder="Second Number">
+    <label for="operation">Choose an operation:</label>
+    <select id="operation" name="operation">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div class="basic">
+  <hr/>
+  <a class="margin" href="{{ url_for('homepage') }}">Return to Homepage</a>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="./static/style.css"/>
+</head>
+
+<body>
+<div class="basic">
+  <h1>Upload a Picture:</h1>
+    <hr/>
+  <form method="post" enctype="multipart/form-data" action="{{ url_for('handle_file_upload') }}">
+    <input type="file"
+           name="file">
+    <button type="submit">Upload</button>
+  </form>
+    <hr/>
+  <a class="margin" href="{{ url_for('homepage') }}">Return to Homepage</a>
+</div>
+</body>
+
+</html>

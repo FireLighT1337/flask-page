@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./static/style.css"/>
+</head>
+
+<body>
+<div class="basic">
+    <p>Welcome to the Homepage</p>
+    <hr/>
+    <div>
+        <a class="margin" href="{{ url_for('calculator') }}">Use Calculator</a>
+        <a class="margin" href="{{ url_for('file_upload') }}">Upload a Picture</a>
+    </div>
+</div>
+</body>
+
+</html>
