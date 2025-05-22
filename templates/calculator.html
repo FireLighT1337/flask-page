@@ -32,6 +32,11 @@
   </form>
 </div>
 <div class="basic">
+  {% if result %}
+  <h1>Result:</h1>
+  <hr/>
+  <p class="bold">{{ result }}</p>
+  {% endif %}
   <hr/>
   <a class="margin" href="{{ url_for('homepage') }}">Return to Homepage</a>
 </div>

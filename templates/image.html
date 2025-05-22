@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Images</title>
+    <link rel="stylesheet" href="./static/style.css"/>
+</head>
+
+<body>
+<div class="basic">
+  <h1>Upload a Picture:</h1>
+    <hr/>
+  <form method="post" enctype="multipart/form-data" action="{{ url_for('image') }}">
+    <input type="file"
+           name="img">
+    <button type="submit">Upload</button>
+  </form>
+    <hr/>
+  {% if is_post %}
+    <p>Upload successful</p>
+  {% endif %}
+  {% if images %}
+    {% for img in images %}
+      <img class="format-img" src="{{ img }}"/>
+      <hr/>
+    {% endfor %}
+  {% endif %}
+  <a class="margin" href="{{ url_for('homepage') }}">Return to Homepage</a>
+</div>
+</body>
+
+</html>

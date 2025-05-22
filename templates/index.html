@@ -8,20 +8,8 @@
 
 <body>
 <div class="basic">
-    <h1>Login: GET</h1>
-    <form method="get" action="{{ url_for('handle_get') }}">
-    <input  type="text"
-            name="username"
-            placeholder="Username">
-    <input  type="password"
-            name="password"
-            placeholder="Password">
-    <button type="submit">Submit</button>
-    </form>
-</div>
-<div class="basic">
-    <h1>Login: POST</h1>
-    <form method="post" action="{{ url_for('handle_post') }}">
+    <h1>Login:</h1>
+    <form method="post" action="{{ url_for('handle_login') }}">
     <input  type="text"
             name="username"
             placeholder="Username">
